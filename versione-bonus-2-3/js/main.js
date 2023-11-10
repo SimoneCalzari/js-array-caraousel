@@ -122,6 +122,7 @@ function () {
 
 // SOLUZIONE NON EFFICIENTE PER MOLTE FOTO, RAGGIUNGE L'OBBIETTIVO IN QUESTO CASO
 
+/*
 arrayItemsMini[0].addEventListener('click',
   function() {
     arrayItems[itemActive].classList.remove('active'); // PRINCIPALE
@@ -171,3 +172,17 @@ arrayItemsMini[4].addEventListener('click',
     arrayItemsMini[4].classList.add('active'); // LATERALE
   }
 )
+*/
+
+// SOLUZIONE OTTIMIZZATA CON CICLO FOR
+
+for (let j = 0; j < arrayItemsMini.length; j++) {
+  arrayItemsMini[j].addEventListener('click',
+  function() {
+    arrayItems[itemActive].classList.remove('active'); // PRINCIPALE
+    arrayItemsMini[itemActive].classList.remove('active'); // LATERALE
+    itemActive = j;
+    arrayItems[j].classList.add('active'); // PRINCIPALE
+    arrayItemsMini[j].classList.add('active'); // LATERALE
+  })
+}
