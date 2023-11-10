@@ -93,6 +93,7 @@
     position: relative;
     height: 20%;
     filter: opacity(0.5);
+    cursor: pointer;
 }
 
 .item-mini.active {

@@ -13,7 +13,6 @@ const imgs = ['img/01.jpg', 'img/02.jpg', 'img/03.jpg', 'img/04.jpg', 'img/05.jp
 let itemActive = 0;
 
 
-
 // ciclo for per inserimento immagini e contenitori html
 for (let i = 0; i < imgs.length; i++) {
 
@@ -119,3 +118,56 @@ function () {
 })
 
 
+
+
+// SOLUZIONE NON EFFICIENTE PER MOLTE FOTO, RAGGIUNGE L'OBBIETTIVO IN QUESTO CASO
+
+arrayItemsMini[0].addEventListener('click',
+  function() {
+    arrayItems[itemActive].classList.remove('active'); // PRINCIPALE
+    arrayItemsMini[itemActive].classList.remove('active'); // LATERALE
+    itemActive = 0;
+    arrayItems[0].classList.add('active'); // PRINCIPALE
+    arrayItemsMini[0].classList.add('active'); // LATERALE
+  }
+)
+
+arrayItemsMini[1].addEventListener('click',
+  function() {
+    arrayItems[itemActive].classList.remove('active'); // PRINCIPALE
+    arrayItemsMini[itemActive].classList.remove('active'); // LATERALE
+    itemActive = 1;
+    arrayItems[1].classList.add('active'); // PRINCIPALE
+    arrayItemsMini[1].classList.add('active'); // LATERALE
+  }
+)
+
+arrayItemsMini[2].addEventListener('click',
+  function() {
+    arrayItems[itemActive].classList.remove('active'); // PRINCIPALE
+    arrayItemsMini[itemActive].classList.remove('active'); // LATERALE
+    itemActive = 2;
+    arrayItems[2].classList.add('active'); // PRINCIPALE
+    arrayItemsMini[2].classList.add('active'); // LATERALE
+  }
+)
+
+arrayItemsMini[3].addEventListener('click',
+  function() {
+    arrayItems[itemActive].classList.remove('active'); // PRINCIPALE
+    arrayItemsMini[itemActive].classList.remove('active'); // LATERALE
+    itemActive = 3;
+    arrayItems[3].classList.add('active'); // PRINCIPALE
+    arrayItemsMini[3].classList.add('active'); // LATERALE
+  }
+)
+
+arrayItemsMini[4].addEventListener('click',
+  function() {
+    arrayItems[itemActive].classList.remove('active'); // PRINCIPALE
+    arrayItemsMini[itemActive].classList.remove('active'); // LATERALE
+    itemActive = 4;
+    arrayItems[4].classList.add('active'); // PRINCIPALE
+    arrayItemsMini[4].classList.add('active'); // LATERALE
+  }
+)
